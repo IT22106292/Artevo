@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artevo | By Archana</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
+        .artevo-body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: #ffffff;
+            color: black;
+        }
+
+        .artevo-container {
+            margin-top: 100px;
+            margin-bottom: 20px;
+            display: flex;
+            margin-left: 19%;
+            flex-direction: row;
+            max-width: 950px;
+            background: rgba(255, 255, 255, 0.415);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .artevo-image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-width: 400px;
+        }
+
+        .artevo-form-section {
+            padding: 40px;
+            max-width: 550px;
+            width: 100%;
+        }
+
+        .artevo-heading {
+            font-size: 26px;
+            color: rgb(164, 130, 20);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .artevo-description {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .artevo-signup-text {
+            font-weight: 600;
+            color: black;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .artevo-form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        .artevo-input {
+            margin: 10px 0;
+            padding: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            background: transparent;
+            color: black;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .artevo-input::placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .artevo-input:focus {
+            border-color: black;
+            outline: none;
+        }
+
+        .artevo-button {
+            background: rgb(164, 130, 20);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 300;
+            transition: 0.3s ease;
+        }
+
+        .artevo-button:hover {
+            background: rgba(181, 127, 35, 0.892);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .artevo-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .artevo-image-section img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .artevo-form-section {
+                padding: 20px;
+                max-width: 100%;
+            }
+
+            .artevo-heading {
+                font-size: 22px;
+                text-align: center;
+            }
+
+            .artevo-description {
+                font-size: 12px;
+                text-align: center;
+            }
+
+            .artevo-signup-text {
+                text-align: center;
+            }
+
+            .artevo-form {
+                margin-top: 20px;
+            }
+
+            .artevo-input {
+                font-size: 16px;
+                padding: 14px;
+            }
+
+            .artevo-button {
+                padding: 14px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .artevo-heading {
+                font-size: 20px;
+            }
+
+            .artevo-description {
+                font-size: 12px;
+            }
+
+            .artevo-signup-text {
+                font-size: 14px;
+            }
+
+            .artevo-input {
+                font-size: 16px;
+                padding: 16px;
+            }
+
+            .artevo-button {
+                padding: 16px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body class="artevo-body">
+       <!-- Header -->
+       <header class="header">
+        <a href="#" class="logo">
+            Artevo
+        </a>
+        
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="news.html">Artevo News</a>
+            <a href="contact.html">Contact</a>
+            <span>|</span>
+            <a href="login.html">Login</a>
+            <a href="signup.html" class="btn">Sign Up</a>
+        </nav>
+    </header>
+    <div>
+    <div class="artevo-container">
+        <div class="artevo-image-section">
+            <img src="images/sub.png" alt="Golden Art Model">
+        </div>
+        <div class="artevo-form-section">
+            <h2 class="artevo-heading">JOIN THE ARTEVO COMMUNITY</h2>
+            <p class="artevo-description">Step into the world of fine art and creativity, where inspiration knows no bounds. Discover a curated selection of breathtaking masterpieces, explore the stories behind iconic artists, and stay connected to the ever-evolving landscape of contemporary and classic art.  
+
+            <br>   Receive exclusive updates, in-depth artist highlights, and the latest trends from the Artevo gallery. Be the first to know about new exhibitions, special events, and featured artworks that shape the future of the art world.</p>
+            <p class="artevo-signup-text">SIGN UP FOR EXCLUSIVE ART NEWS</p>
+            <form class="artevo-form">
+                <input class="artevo-input" type="text" placeholder="First Name" required>
+                <input class="artevo-input" type="text" placeholder="Last Name" required>
+                <input class="artevo-input" type="email" placeholder="Email" required>
+                <button class="artevo-button" type="submit">SUBSCRIBE NOW</button>
+            </form>
+        </div>
+       
+    </div>
+    <footer class="footer">
+        <div class="max-width">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h4>Artevo</h4>
+                    <p>&copy; 2025 Artevo. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="PrivacyPolicy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="aboutus.html">About-Us</a>
+                </div>
+            </div>
+       
+    </footer>
+   </div>
+    
+</body>
+</html>

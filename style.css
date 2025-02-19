@@ -1,0 +1,186 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Poppins:wght@300;400;500&display=swap');
+
+/* Reset and Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    transition: 0.2s linear;
+}
+
+/* Body Styling */
+body {
+    background: #000;
+    color: #fff;
+}
+
+/* Buttons */
+.btn {
+    margin-top: 2rem;
+    width: 150px;
+    padding: 12px;
+    color: #fff;
+    background: rgb(164, 130, 20);
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgba(212, 152, 48, 0.76);
+    transition: 0.4s;
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.5rem 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.header .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo i {
+    color: #fff;
+    margin-right: 0.5rem;
+}
+
+.header .navbar a {
+    font-size: 1rem;
+    margin: 0 1rem;
+    color: #fff;
+}
+
+.header .navbar a:hover {
+    color: rgb(164, 130, 20);
+}
+
+.header .navbar span {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.header .btn {
+    background: transparent;
+    color: rgb(164, 130, 20);
+    border: 1px solid rgb(164, 130, 20);
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+
+.max-width {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home .home-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.home h3 {
+    color: #fff;
+    margin-top: 6rem;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.home p {
+    color: rgb(194, 191, 191);
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.home .home-image {
+    position: absolute;
+    right: 0;  
+    top: 0;  
+    width: 50%; 
+    height: 100%;  
+    z-index: -1; 
+    overflow: hidden;
+    border: none; 
+}
+
+.home .home-image img {
+    position: absolute;
+    right: 0;
+    bottom: 0;  
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 1));  
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 1)); 
+    border: none;  
+}
+/* Footer Styling */
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer .footer-left h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.footer .footer-left p {
+    color: rgb(194, 191, 191);
+    font-size: 1rem;
+}
+
+.footer .footer-right a {
+    color: rgb(164, 130, 20);
+    margin: 0 15px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.footer .footer-right a:hover {
+    color: rgba(212, 152, 48, 0.76);
+}

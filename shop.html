@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Artevo | By Archana</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Font Awesome Icons CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        /*=============== GOOGLE FONTS ===============*/
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+        /*=============== VARIABLES CSS ===============*/
+        :root {
+          /*========== Colors ==========*/
+          --first-color: #a48114;
+          --title-color: hsl(0, 0%, 15%);
+          --text-color: hsl(0, 0%, 35%);
+          --body-color: hsl(0, 0%, 95%);
+          --container-color: #ffffff;
+
+          /*========== Font and typography ==========*/
+          --body-font: "Poppins", sans-serif;
+          --h2-font-size: 1.25rem;
+          --small-font-size: .813rem;
+        }
+
+        /*========== Responsive typography ==========*/
+        @media screen and (min-width: 1120px) {
+          :root {
+            --h2-font-size: 1.5rem;
+            --small-font-size: .875rem;
+          }
+        }
+
+        /*=============== BASE ===============*/
+        * {
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+        }
+
+        body {
+          font-family: var(--body-font);
+          background-color: var(--body-color);
+          color: var(--text-color);
+        }
+
+        img {
+            margin-top: 20%;
+          display: block;
+          max-width: 100%;
+          height: auto;
+        }
+
+        /*=============== CARD ===============*/
+        .container {
+          display: grid;
+          margin-top: 100px;
+       
+        }
+        
+
+        .card__container {
+          display: grid;
+          row-gap: 3.5rem;
+          margin-right: 40px;
+          margin-left: 100px;
+          margin-bottom: 100px;
+          
+        }
+
+        .card__article {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .card__img {
+          width: 328px;
+          border-radius: 1.5rem;
+        }
+
+        .card__data {
+          width: 280px;
+          background-color: var(--container-color);
+          padding: 1.5rem 2rem;
+          box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+          border-radius: 1rem;
+          position: absolute;
+          bottom: -9rem;
+          left: 0;
+          right: 0;
+          margin-inline: auto;
+          opacity: 0;
+          transition: opacity 1s 1s;
+        }
+
+        .card__description {
+          display: block;
+          font-size: var(--small-font-size);
+          margin-bottom: .25rem;
+        }
+
+        .card__title {
+          font-size: var(--h2-font-size);
+          font-weight: 500;
+          color: var(--title-color);
+          margin-bottom: .75rem;
+        }
+
+        .card__button {
+          text-decoration: none;
+          font-size: var(--small-font-size);
+          font-weight: 500;
+          color: var(--first-color);
+        }
+
+        .card__button:hover {
+          text-decoration: underline;
+        }
+
+        /* Naming animations in hover */
+        .card__article:hover .card__data {
+          animation: show-data 1s forwards;
+          opacity: 1;
+          transition: opacity .3s;
+        }
+
+        .card__article:hover {
+          animation: remove-overflow 2s forwards;
+        }
+
+        .card__article:not(:hover) {
+          animation: show-overflow 2s forwards;
+        }
+
+        .card__article:not(:hover) .card__data {
+          animation: remove-data 1s forwards;
+        }
+        
+        /* Card animation */
+        @keyframes show-data {
+          50% {
+            transform: translateY(-10rem);
+          }
+          100% {
+            transform: translateY(-7rem);
+          }
+        }
+
+        @keyframes remove-overflow {
+          to {
+            overflow: initial;
+          }
+        }
+
+        @keyframes remove-data {
+          0% {
+            transform: translateY(-7rem);
+          }
+          50% {
+            transform: translateY(-10rem);
+          }
+          100% {
+            transform: translateY(.5rem);
+          }
+        }
+
+        @keyframes show-overflow {
+          0% {
+            overflow: initial;
+            pointer-events: none;
+          }
+          50% {
+            overflow: hidden;
+          }
+        }
+
+        /*=============== BREAKPOINTS ===============*/
+        /* For small devices */
+        @media screen and (max-width: 340px) {
+          .container {
+            margin-inline: 1rem;
+          }
+
+          .card__data {
+            width: 250px;
+            padding: 1rem;
+          }
+        }
+
+        /* For medium devices */
+        @media screen and (min-width: 768px) {
+          .card__container {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 1.5rem;
+          }
+        }
+
+        /* For large devices */
+        @media screen and (min-width: 1120px) {
+          .container {
+            height: 100vh;
+          }
+
+          .card__container {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          .card__img {
+            width: 348px;
+          }
+          .card__data {
+            width: 316px;
+            padding-inline: 2.5rem;
+          }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            Artevo
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="news.html">Artevo News</a>
+            <a href="contact.html">Contact</a>
+            <span>|</span>
+            <a href="login.html">Login</a>
+            <a href="signup.html" class="btn">Sign Up</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="card__container">
+           
+            <!-- Image cards -->
+            <article class="card__article"><img src="img/1.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">5200.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/2.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">3450.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/3.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">3900.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            
+            <article class="card__article"><img src="img/4.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">7100.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/5.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">6350.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/6.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">6100.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            
+            <article class="card__article"><img src="img/7.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">4000.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/8.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">4230.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/9.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">4310.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+       
+            <article class="card__article"><img src="img/10.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">8150.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/11.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">6200.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/12.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">7000.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+      
+            <article class="card__article"><img src="img/13.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">7600.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/14.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">6550.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/15.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">7500.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+      
+            <article class="card__article"><img src="img/16.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">5400.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/17.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">3850.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/18.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">5430.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+      
+            <article class="card__article"><img src="img/19.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">8800.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/20.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">7550.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            <article class="card__article"><img src="img/21.png" alt="image" class="card__img"><div class="card__data"><span class="card__description">Price Rs.</span><h2 class="card__title">7000.00</h2><a href="login.html" class="card__button">Buy Now</a></div></article>
+            
+            
+        </div>
+        <footer class="footer">
+            <div class="max-width">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <h4>Artevo</h4>
+                        <p>&copy; 2025 Artevo. All rights reserved.</p>
+                    </div>
+                    <div class="footer-right">
+                        <a href="PrivacyPolicy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="aboutus.html">About-Us</a>
+                    </div>
+                </div>
+           
+        </footer>
+    </div>
+   
+    
+</div>  
+</body>
+</html>
